@@ -1,0 +1,24 @@
+﻿@model Kalkulator01.Models.kalk
+
+@{
+    ViewData["Title"] = "Kalkulator prosty";
+}
+
+<h1>Kalkulator prosty</h1>
+
+<div>
+    Witaj o to prosty kalkulator, gdzie podzielisz, pomnożysz, dodasz i odejmiesz dwie proste liczby.
+
+    <form method="post">
+        Podaj pierwszą liczbę<br /><input type="number" asp-for="liczba" /> <br>
+        Podaj drugą liczbę<br /><input type="number" asp-for="liczbadwa" /><br>
+        Jakiego działania chcesz dokonać?<br /><input type="text" name="znak" /><br>
+        <input type="submit" value="Przelicz" />
+    </form>
+
+    @if (ViewBag.Wynik != null)
+    {
+        <h2>Wynik:</h2>
+        <p>@ViewBag.Wynik</p>
+    }
+</div>
