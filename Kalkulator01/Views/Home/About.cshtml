@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    
+    ViewData["Title"] = "About";
+}
+
+<p>Strona About</p>
+
+@Viewbag.powitanie @Viewbag.Imie 
+
+@foreach (Dane d in Model){
+    <p>d.Name d.Surname</p>
+}
